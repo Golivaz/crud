@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Cadastro</title>
+</head>
+<body>
+	<form id="formulario" name="formulario" method="post" action="salvar.php">
+		<h2 align="center">Sistema de Cadastro do Mvataide</h2>
+		<table width="490" border="1" align="center">
+			<tr>
+				<th width="170">Nome</th>
+				<td width="240"><input name="nome" type="text" id="nome"/></td>
+			</tr>
+			<tr>
+				<th>Sobrenome</th>
+				<td width="240"><input name="sobrenome" type="text" id="sobrenome"/></td>
+			</tr>
+			<tr>
+				<th>E-mail</th>
+				<td><input name="email" type="email" id="email"/></td>
+			</tr>
+			<tr>
+				<th>Gênero</th>
+				<td><input name="sexo" type="radio" value="M" id="sexo" checked="checked"/>Masculino
+					<input name="sexo" type="radio" value="F" id="sexo">Feminino
+					<input name="sexo" type="radio" value="I" id="sexo">Indefinido
+				</td>
+			</tr>
+			<tr>
+				<th>Salvar</th>
+				<td><input type="submit" name="submit" value="Gravar" style="cursor:pointer"/>
+				</td>
+			</tr>
+		</table>
+	</form>
+	<p><a href="index.html">Voltar....</a></p>
+</body>
+</html>
