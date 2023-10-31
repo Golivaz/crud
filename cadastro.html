@@ -1,38 +1,57 @@
 <!DOCTYPE html>
 <head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	<meta charset="utf-8"/>
 	<title>Cadastro</title>
 </head>
 <body>
-	<form id="formulario" name="formulario" method="post" action="salvar.php">
-		<h2 align="center">Sistema de Cadastro do Mvataide</h2>
-		<table width="490" border="1" align="center">
-			<tr>
-				<th width="170">Nome</th>
-				<td width="240"><input name="nome" type="text" id="nome"/></td>
-			</tr>
-			<tr>
-				<th>Sobrenome</th>
-				<td width="240"><input name="sobrenome" type="text" id="sobrenome"/></td>
-			</tr>
-			<tr>
-				<th>E-mail</th>
-				<td><input name="email" type="email" id="email"/></td>
-			</tr>
-			<tr>
-				<th>Gênero</th>
-				<td><input name="sexo" type="radio" value="M" id="sexo" checked="checked"/>Masculino
-					<input name="sexo" type="radio" value="F" id="sexo">Feminino
-					<input name="sexo" type="radio" value="I" id="sexo">Indefinido
-				</td>
-			</tr>
-			<tr>
-				<th>Salvar</th>
-				<td><input type="submit" name="submit" value="Gravar" style="cursor:pointer"/>
-				</td>
-			</tr>
-		</table>
-	</form>
+	<div class="container">
+		<form id="formulario" name="formulario" method="post" action="salvar.php">
+			<h2 class="text-center">Sistema de Cadastro Guilherme</h2>
+			<table class="table table-bordered mx-auto" style="width: 490px;">
+				<tr>
+					<th style="width: 170px;">Nome</th>
+					<td><input name="nome" type="text" class="form-control" id="nome"></td>
+				</tr>
+				<tr>
+					<th>Sobrenome</th>
+					<td><input name="sobrenome" type="text" class="form-control" id="sobrenome"></td>
+				</tr>
+				<tr>
+					<th>E-mail</th>
+					<td><input name="email" type="email" class="form-control" id="email"></td>
+				</tr>
+				<tr>
+					<th>Gênero</th>
+					<td>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="sexo" value="M" id="sexoM" checked>
+							<label class="form-check-label" for="sexoM">Masculino</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="sexo" value="F" id="sexoF">
+							<label class="form-check-label" for="sexoF">Feminino</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="sexo" value="I" id="sexoI">
+							<label class="form-check-label" for="sexoI">Indefinido</label>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th></th>
+					<td><input type="submit" name="submit" value="Gravar" class="btn btn-primary" style="cursor:pointer"></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+
+	
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 	<p><a href="index.html">Voltar....</a></p>
+
 </body>
 </html>
