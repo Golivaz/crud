@@ -17,7 +17,7 @@
 <body>
 	<?php if(mysqli_num_rows($resultado) < 1){ exit; } ?>
 	<div class="container">
-    <h2 class="text-center">Sistema de Cadastro do Mvataide</h2>
+    <h2 class="text-center">Sistema de Cadastro do Guilherme</h2>
     <table class="table table-bordered mx-auto" style="max-width: 500px;">
         <thead>
             <tr>
@@ -62,12 +62,14 @@
             } ?>
         </tbody>
     </table>
+	<h3><a href="index.html">Voltar</a></h3>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-	<h3><a href="index.html">Voltar Menu</a></h3>
+
+
 </body>
 </html>

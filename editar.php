@@ -31,44 +31,56 @@
 	mysqli_close($conn);
 ?>
 <!DOCTYPE html>
-<head><title>Editar</title><meta charset="utf-8"/></head>
-<body>
-	<h2 align="center">Editar PHP</h2>
-	<form id="form1" name="form1" method="post" action="salvar_edicao.php">
-		<input type="hidden" name="id" id="id" value="<?php echo $id;?>"/>
-		<table width="440" border="1" align="center">
-			<tr>
-				<td width="165">Nome</td>
-				<td width="380"><input name="nome" type="text" id="nome"
-				value="<?php echo $dados["nome"];?>"/></td>
-			</tr>
-			<tr>
-				<td>Sobrenome</td>
-				<td><input name="sobrenome" type="text" id="sobrenome"
-				value="<?php echo $dados["sobrenome"];?>"/></td>
-			</tr>
-			<tr>
-				<td>E-mail</td>
-				<td><input name="email" type="email" id="email"
-				value="<?php echo $dados["email"];?>"/></td>
-			</tr>
-			<tr>
-				<td>Sexo</td>
-				<td><input name="sexo" type="radio" id="M" value="M"
-					<?php echo $checkedM;?> />Masculino
-					<input name="sexo" type="radio" id="F" value="F"
-					<?php echo $checkedF;?> />Feminino
-					<input name="sexo" type="radio" id="I" value="I"
-					<?php echo $checkedI;?> />Indeterminado
-				</td>
-			</tr>
-			<tr>
-				<td>Ação:</td>
-				<td><input type="submit" name="submit" value="Gravar" 
-				style="cursor:pointer"/></td>
-			</tr>
-		</table>
-	</form>
+<head><title>Editar</title><meta charset="utf-8"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<div class="container">
+        <h2 class="text-center">Editar PHP</h2>
+        <form id="form1" name="form1" method="post" action="salvar_edicao.php">
+            <input type="hidden" name="id" id="id" value="<?php echo $id;?>">
+            <table class="table table-bordered mx-auto" style="max-width: 440px;">
+                <tbody>
+                    <tr>
+                        <td style="width: 165px;">Nome</td>
+                        <td><input name="nome" type="text" id="nome" value="<?php echo $dados["nome"];?>"></td>
+                    </tr>
+                    <tr>
+                        <td>Sobrenome</td>
+                        <td><input name="sobrenome" type="text" id="sobrenome" value="<?php echo $dados["sobrenome"];?>"></td>
+                    </tr>
+                    <tr>
+                        <td>E-mail</td>
+                        <td><input name="email" type="email" id="email" value="<?php echo $dados["email"];?>"></td>
+                    </tr>
+                    <tr>
+                        <td>Sexo</td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="sexo" id="M" value="M" <?php echo $checkedM;?>>
+                                <label class="form-check-label" for="M">Masculino</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="sexo" id="F" value="F" <?php echo $checkedF;?>>
+                                <label class="form-check-label" for="F">Feminino</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="sexo" id="I" value="I" <?php echo $checkedI;?>>
+                                <label class="form-check-label" for="I">Indeterminado</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ação:</td>
+                        <td><input type="submit" name="submit" value="Gravar" class="btn btn-primary" style="cursor:pointer"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	<h3><a href="index.html">Voltar</a></h3>
 </body>
 </html>

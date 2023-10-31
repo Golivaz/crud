@@ -15,3 +15,4 @@
 	mysqli_close($conn);
 	header("Location: listar.php");
 ?>
+<h3><a href="index.html">Voltar</a></h3>
